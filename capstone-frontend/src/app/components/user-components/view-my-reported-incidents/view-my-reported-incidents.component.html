@@ -1,0 +1,13 @@
+<app-user-navbar></app-user-navbar>
+<h1>YOUR REPORTED INCIDENT!!</h1>
+<div class="incident-cards">
+  <div *ngFor="let incident of incidents" class="card" (click)="viewIncidentDetails(incident.id)">
+    <div class="card-body">
+      <h5 class="card-title">{{ incident.incidentType }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ incident.location }}</h6>
+      <p class="card-text">{{ incident.description }}</p>
+      <p class="card-time">Time: {{ incident.time | date:'short' }}</p>
+      <p class="card-review-status">Reviewed: {{ incident.reviewStatus ? 'Yes' : 'No' }}</p>
+    </div>
+  </div>
+</div>

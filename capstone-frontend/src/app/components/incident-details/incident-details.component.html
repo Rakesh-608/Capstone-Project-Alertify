@@ -1,0 +1,18 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="incident-details-container">
+  <div class="incident-card">
+    <h2>Incident Details</h2>
+    <p><strong>Incident ID:</strong> {{ incident.id }}</p>
+    <p><strong>User ID:</strong> {{ incident.userId }}</p>
+    <p><strong>Location:</strong> {{ incident.location }}</p>
+    <p><strong>Time:</strong> {{ incident.time | date: 'short' }}</p>
+    <p><strong>Date Posted:</strong> {{ incident.dateOfPosted | date: 'short' }}</p>
+    <p><strong>Incident Type:</strong> {{ incident.incidentType }}</p>
+    <p><strong>Description:</strong> {{ incident.description }}</p>
+    <p><strong>Reviewed:</strong> {{ incident.reviewStatus ? 'Yes' : 'No' }}</p>
+
+    <!-- Button to navigate back (optional) -->
+    <button class="back-button" (click)="goBack()">Back to Incidents</button>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<!-- <div class="form-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a routerLink="/register">Register here</a></p>
+</div> -->
+
+
+<!-- <div class="form-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+    />
+    <div *ngIf="email?.invalid && (email?.touched || email?.dirty)" class="error-message">
+      <div *ngIf="email?.errors?.required">Email is required.</div>
+      <div *ngIf="email?.errors?.email">Please enter a valid email.</div>
+    </div>
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+    />
+    <div *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="error-message">
+      <div *ngIf="password?.errors?.required">Password is required.</div>
+      <div *ngIf="password?.errors?.minlength">Password must be at least 6 characters.</div>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <p>Don't have an account? <a routerLink="/register">Register here</a></p>
+</div> -->
+
+
+<div class="form-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      formControlName="email"
+    />
+    <div *ngIf="email?.invalid && (email?.touched || email?.dirty)" class="error-message">
+      <div *ngIf="email?.errors?.['required']">Email is required.</div>
+      <div *ngIf="email?.errors?.['email']">Please enter a valid email.</div>
+    </div>
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      formControlName="password"
+    />
+    <div *ngIf="password?.invalid && (password?.touched || password?.dirty)" class="error-message">
+      <div *ngIf="password?.errors?.['required']">Password is required.</div>
+      <div *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters.</div>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <p>Don't have an account? <a (click)="navigateToRegister()">Register here</a></p>
+</div>

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+.app-layout {
+    display: flex; /* Use flexbox layout for the main container */
+}
+
+app-user-dashboard {
+    width: 60px; /* Collapsed width for sidebar */
+    height: 100vh; /* Full height of the viewport */
+    transition: width 0.3s; /* Smooth transition for width */
+}
+
+.content-wrapper {
+    flex-grow: 1; /* Allow content to take remaining space */
+    padding: 20px; /* Padding for content */
+    transition: margin-left 0.3s; /* Smooth transition for margin */
+}
+
+/* Adjust margin when sidebar is expanded */
+app-user-dashboard:hover ~ .content-wrapper {
+    margin-left: 200px; /* Adjust for the expanded sidebar width */
+}

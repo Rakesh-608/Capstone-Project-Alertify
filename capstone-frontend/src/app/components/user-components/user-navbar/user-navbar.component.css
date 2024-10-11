@@ -1,0 +1,81 @@
+/* Sidebar Styles */
+#sidebar {
+  width: 230px; /* Static width */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Fix to the left side */
+  top: 0;
+  left: 0;
+  background-color: #007bff !important; /* Sidebar background color */
+  color: #fff;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  z-index: 999; /* Ensure sidebar stays above other content */
+  padding-top: 10px; /* Reduced padding to move content upwards */
+  padding-bottom: 20px; /* Add some space at the bottom */
+  justify-content: flex-start; /* Align items to start of sidebar */
+  box-sizing: border-box; /* Ensure padding doesn't add to total height */
+}
+
+/* Adjust content wrapper margin for sidebar */
+.content-wrapper {
+  margin-left: 230px; /* Adjust for static sidebar width */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Button/Link hover effect */
+#sidebar .notification {
+  margin-top: 10px; /* Reduce top margin to move buttons closer to each other */
+  font-size: 1rem; /* Icon size */
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; /* Full width for clickable area */
+  border-radius: 8px;
+  color: #fff;
+}
+
+#sidebar .notification:hover {
+  background-color: #0056b3; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Icon styles */
+#sidebar .notification i {
+  font-size: 1.5rem; /* Icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Notification text */
+#sidebar .notification-text {
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+
+/* Active notification styles */
+.notification.active i,
+.notification.active span {
+  color: #08121d !important; 
+  font-weight: bold;
+}
+
+/* Link/Anchor Styles */
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+  font-size: 1.5rem;
+}
+
+/* Hover effect for links */
+#sidebar a:hover {
+  color: #f0f0f0; /* Slightly lighter color on hover */
+}
+
+

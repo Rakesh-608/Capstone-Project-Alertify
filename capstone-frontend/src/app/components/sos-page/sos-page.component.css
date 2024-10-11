@@ -1,0 +1,95 @@
+body {
+  background-color: #eef2f3; /* Soft background color */
+  font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+.emergency-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  margin: 40px auto; /* Center container */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #fff; /* White background */
+  max-width: 800px; /* Max width for larger screens */
+  margin-left: 5rem;
+}
+
+.header {
+  font-size: 24px;
+  color: #333; /* Darker text for header */
+  margin-bottom: 20px; /* Space below header */
+}
+
+.form-section {
+  display: flex;
+  flex-direction: row; /* Align inputs in a row */
+  gap: 30px; /* Space between input boxes */
+  margin-bottom: 20px; /* Space below input section */
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to start */
+  width: 250px; /* Fixed width */
+}
+
+.square-box {
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Space inside the box */
+  background-color: #f1f1f1; /* Light background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s ease; /* Smooth shadow effect */
+}
+
+.square-box:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+label {
+  margin-bottom: 8px; /* Space below label */
+  font-weight: bold; /* Bold label for emphasis */
+}
+
+select {
+  width: 100%; /* Full width for select */
+  padding: 10px; /* Padding for select */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  font-size: 16px; /* Font size */
+  transition: border 0.3s; /* Transition for border */
+}
+
+select:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.submit-button {
+  padding: 12px 30px; /* Padding for button */
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker button on hover */
+}
+
+/* Response box styling */
+.response-box {
+  margin-top: 20px; /* Space above response box */
+  padding: 15px; /* Padding for response box */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

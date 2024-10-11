@@ -1,0 +1,27 @@
+<app-user-navbar></app-user-navbar>
+<div class="alert-cards-container">
+    <div class="card mb-3" *ngFor="let alert of alerts">
+      <div class="card-body">
+        <h5 class="card-title">{{ alert.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ alert.severity }}</h6>
+        <p class="card-text">{{ alert.description }}</p>
+        <p class="card-text">
+          <small class="text-muted">Effective: {{ alert.effectiveLocal }} ({{ alert.effectiveUtc }})</small>
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Expires: {{ alert.expiresLocal }} ({{ alert.expiresUtc }})</small>
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Onset: {{ alert.onsetLocal }} ({{ alert.onsetUtc }})</small>
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Ends: {{ alert.endsLocal }} ({{ alert.endsUtc }})</small>
+        </p>
+        <a [href]="alert.uri" class="card-link">More details</a>
+        <p class="card-text">
+          <small class="text-muted">Regions: {{ alert.regions.join(', ') }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  

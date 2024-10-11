@@ -1,0 +1,32 @@
+<!-- <app-user-navbar></app-user-navbar>
+<div class="incident-cards">
+  <div *ngFor="let incident of incidents" class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ incident.incidentType }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ incident.location }}</h6>
+      <p class="card-text">{{ incident.description }}</p>
+      <p class="card-time">Time: {{ incident.time | date : "short" }}</p>
+      <p class="card-review-status">
+        Reviewed: {{ incident.reviewStatus ? "Yes" : "No" }}
+      </p>
+    </div>
+  </div>
+</div> -->
+
+<app-user-navbar></app-user-navbar>
+<div class="incident-cards">
+  <div *ngFor="let incident of incidents" class="card" (click)="viewIncidentDetails(incident.id)">
+    <div class="card-body">
+      <!-- Small font for user ID and dateOfPosted -->
+      <p class="small-text">Posted by User ID: {{ incident.userId }} on {{ incident.dateOfPosted | date:'short' }}</p>
+      
+      <!-- Medium font for incidentType, location, and time -->
+      <h5 class="medium-text">{{ incident.incidentType }}</h5>
+      <h6 class="medium-text">{{ incident.location }}</h6>
+      <p class="medium-text">Time: {{ incident.time | date:'short' }}</p>
+      
+      <!-- Review status (optional in the card, not emphasized) -->
+      <!-- <p class="card-review-status">Reviewed: {{ incident.reviewStatus ? 'Yes' : 'No' }}</p> -->
+    </div>
+  </div>
+</div>

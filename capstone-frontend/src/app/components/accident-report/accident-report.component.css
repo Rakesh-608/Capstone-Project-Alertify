@@ -1,0 +1,41 @@
+/* Container for the report box */
+.report-container {
+    display: flex;
+    /* justify-content: center; Center the box horizontally */
+    align-items: center;     /* Center the box vertically (optional) */
+    height: 100vh;           /* Full viewport height */
+    background-color: #f0f0f0; /* Light background for contrast */
+    padding: 20px;
+  }
+  
+  /* Styling for the report box */
+  .report-box {
+    background-color: #fff; /* White background for the box */
+    border-radius: 10px;    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px;       /* Maximum width of the box */
+    width: 100%;            /* Make the box responsive */
+    padding: 20px;          /* Padding inside the box */
+    border: 1px solid #ccc; /* Light border around the box */
+  }
+  
+  /* Headline style */
+  .report-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333; /* Dark color for headline */
+    text-align: center; /* Center the heading */
+  }
+  
+  /* Text styles */
+  .report-box p {
+    margin-bottom: 10px;
+    color: #555; /* Dark gray for text */
+    font-size: 1rem;
+    line-height: 1.5; /* Increase line height for readability */
+  }
+  
+  .report-box p strong {
+    font-weight: bold; /* Make the labels (like Date, Location) bold */
+  }
+  

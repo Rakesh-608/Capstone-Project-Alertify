@@ -1,0 +1,78 @@
+/* Main container for the alert cards */
+.alert-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for cards on smaller screens */
+  justify-content: space-between; /* Evenly space the cards */
+  gap: 20px; /* Spacing between the cards */
+  padding: 20px; /* Add padding around the container */
+  margin-left: 80px; /* Initial margin for the content */
+  transition: margin-left 0.3s ease-in-out; /* Transition for sidebar expansion */
+}
+
+/* Individual card styling */
+.card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 12px; /* Rounded corners for the cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  width: 100%; /* Full width of the card */
+  max-width: 350px; /* Set a max width for cards */
+  padding: 20px; /* Padding inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepen the shadow on hover */
+}
+
+/* Card body styles */
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  gap: 10px; /* Add space between content */
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.5rem; /* Larger font size for the title */
+  font-weight: bold; /* Bold title */
+  color: #007bff; /* Primary color for the title */
+  margin-bottom: 10px; /* Add space below title */
+}
+
+/* Card subtitle (severity) */
+.card-subtitle {
+  font-size: 1rem; /* Standard font size for subtitle */
+  color: #6c757d; /* Muted text color */
+}
+
+/* Card text styles */
+.card-text {
+  font-size: 0.95rem; /* Slightly smaller font size for regular text */
+  line-height: 1.4; /* Line height for better readability */
+  color: #333; /* Darker text color */
+}
+
+/* Small text for dates and regions */
+.card-text small {
+  color: #6c757d; /* Muted color for small text */
+  display: block; /* Ensure small text is block-level for better alignment */
+}
+
+/* Link to more details */
+.card-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold the link */
+}
+
+/* Hover effect for the link */
+.card-link:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Sidebar hover effects (adjust margin when sidebar expands) */
+#sidebar:hover ~ .content-wrapper {
+  margin-left: 200px; /* Adjust margin when sidebar expands */
+}

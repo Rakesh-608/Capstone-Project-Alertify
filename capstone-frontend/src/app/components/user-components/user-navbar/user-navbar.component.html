@@ -1,0 +1,46 @@
+<nav id="sidebar" class="bg-dark text-light p-3">
+  <div class="d-flex flex-column align-items-center h-100">
+    <a class="logo mb-4" href="/user-dashboard">
+      <!-- <img src="assets/logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"> -->
+      <span>Alertify</span>
+    </a>    
+    <div class="menu-items d-flex flex-column align-items-center justify-content-center">
+      <div class="notification text-light" [ngClass]="{'active': isActive('/user-profile')}" [routerLink]="['/user-profile']" style="cursor: pointer;">
+        <i class="bi bi-person-circle"></i>
+        <span class="notification-text">Profile</span>
+      </div>
+
+      <!-- View Alerts Section -->
+      <div class="notification text-light" [ngClass]="{'active': isActive('/alerts')}" [routerLink]="['/alerts']" style="cursor: pointer;">
+        <i class="bi bi-bell"></i>
+        <span class="notification-text">View Alerts</span>
+      </div>
+      <!-- View Incident Report Section -->
+      <div class="notification text-light" [ngClass]="{'active': isActive('/view-incidents')}" [routerLink]="['/view-incidents']" style="cursor: pointer;">
+        <i class="bi bi-file-earmark-text"></i>
+        <span class="notification-text">View Incident Report</span>
+      </div>
+      <!-- Report an Incident Section -->
+      <div class="notification text-light" [ngClass]="{'active': isActive('/report-incident')}" [routerLink]="['/report-incident']" style="cursor: pointer;">
+        <i class="bi bi-journal-arrow-up"></i>
+        <span class="notification-text">Report an Incident</span>
+      </div>
+
+      <!-- SOS Emergency Section -->
+      <div class="notification text-light" [ngClass]="{'active': isActive('/sos-page')}" [routerLink]="['/sos-page']" style="cursor: pointer;">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <span class="notification-text">SOS emergency</span>
+      </div>
+
+      <!-- Logout Section -->
+      <!-- <div class="notification text-light" [ngClass]="{'active': isActive('/home')}" [routerLink]="['/home']" style="cursor: pointer;">
+        <i class="bi bi-box-arrow-right"></i>
+        <span class="notification-text">LogOut</span>
+      </div> -->
+      <div class="notification text-light" (click)="logout()" style="cursor: pointer;">
+        <i class="bi bi-box-arrow-right"></i>
+        <span class="notification-text">LogOut</span>
+      </div>
+    </div>
+  </div>
+</nav>

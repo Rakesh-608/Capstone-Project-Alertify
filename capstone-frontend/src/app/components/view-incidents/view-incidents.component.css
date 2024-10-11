@@ -1,0 +1,53 @@
+/* .incident-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 15px;
+  }
+  
+  .card-time,
+  .card-review-status {
+    font-size: 0.9em;
+    color: #666;
+  }
+   */
+
+/* Small font for user ID and date */
+.small-text {
+  font-size: 12px;
+  color: #6c757d; /* Muted color */
+}
+
+/* Medium font for incidentType, location, and time */
+.medium-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Card styles */
+.card {
+  cursor: pointer; /* Make the card clickable */
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}

@@ -1,0 +1,9 @@
+<!-- <app-user-navbar *ngIf="!isLandingPage"></app-user-navbar> 
+<div class="content-wrapper">
+  <router-outlet></router-outlet> 
+</div> -->
+<app-user-navbar *ngIf="!isHiddenNavbar"></app-user-navbar> <!-- Navbar hidden on specific pages -->
+
+<div [ngClass]="{'content-wrapper': !isHiddenNavbar, 'landing-wrapper': isHiddenNavbar}">
+  <router-outlet></router-outlet> <!-- This will load the appropriate component based on the route -->
+</div>

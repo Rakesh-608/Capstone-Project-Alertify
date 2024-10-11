@@ -1,0 +1,31 @@
+<app-user-navbar></app-user-navbar>
+<div class="emergency-container">
+  <h1 class="header">Emergency Service Request</h1>
+  <div class="form-section">
+      <!-- Emergency Type Selection -->
+      <div class="input-box square-box">
+          <label for="emergency-type">Emergency Type:</label>
+          <select id="emergency-type" [(ngModel)]="selectedEmergencyType">
+              <option value="" disabled>Select an emergency type</option>
+              <option *ngFor="let type of emergencyTypes" [value]="type">{{ type }}</option>
+          </select>
+      </div>
+
+      <!-- Emergency Service Selection -->
+      <div class="input-box square-box">
+          <label for="emergency-service">Emergency Service:</label>
+          <select id="emergency-service" [(ngModel)]="selectedService">
+              <option value="" disabled>Select an emergency service</option>
+              <option *ngFor="let service of emergencyServices" [value]="service">{{ service }}</option>
+          </select>
+      </div>
+
+      <!-- Send Request Button -->
+      <button (click)="sendEmergencyRequest()" class="submit-button">Send Request</button>
+  </div>
+
+  <!-- Response Message -->
+  <div class="response-box" *ngIf="response">
+      <p>{{ response }}</p>
+  </div>
+</div>

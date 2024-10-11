@@ -1,0 +1,28 @@
+<!-- <app-user-navbar></app-user-navbar> -->
+<div class="container">
+    <h2>Report an Incident</h2>
+    <form (ngSubmit)="submitIncident()">
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" class="form-control" [(ngModel)]="incident.location" name="location" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input type="datetime-local" id="time" class="form-control" [(ngModel)]="incident.time" name="time" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" [(ngModel)]="incident.description" name="description" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="incidentType">Incident Type</label>
+        <input type="text" id="incidentType" class="form-control" [(ngModel)]="incident.incidentType" name="incidentType" required />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit Incident</button>
+    </form>
+  </div>
+  

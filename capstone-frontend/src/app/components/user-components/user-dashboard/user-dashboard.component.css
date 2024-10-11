@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif; /* Consider using a Google Font for better aesthetics */
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.weather-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #e0e7ff);
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.location-title {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.location-info, .location-loading {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+.weather-title {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #3498db;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card {
+    margin-top: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.weather-card:hover {
+    transform: scale(1.02);
+}
+
+.weather-icon {
+    width: 60px; /* Slightly larger for better visibility */
+    height: auto;
+}
+
+.weather-temp {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e67e22; /* Orange for temperature */
+}
+
+.alerts-title {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #c0392b; /* Dark Red for alerts */
+}
+
+.alerts-list {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.alert-card {
+    background: #ffe8d6; /* Soft peach background */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ffcc00; /* Bright yellow border */
+    transition: background 0.3s ease;
+}
+
+.alert-card:hover {
+    background: #ffe2b5; /* Slightly darker on hover */
+}
+
+.alert-headline {
+    font-weight: bold;
+    color: #d35400; /* Dark orange for headlines */
+    font-size: 16px;
+}
+
+.alert-description {
+    font-size: 14px;
+    color: #34495e; /* Darker gray for description */
+}
+
+.alert-severity {
+    font-weight: bold;
+    color: #c0392b; /* Red for severity */
+}
+
+.no-alerts {
+    font-size: 16px;
+    color: #666;
+    font-style: italic; /* Italicize to differentiate */
+}
+.sos-info-div {
+    background: linear-gradient(145deg, #ffcccc, #ffe6e6); /* Light red gradient background */
+    border: 2px solid #ff4d4d; /* Darker red border for emphasis */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3); /* Soft shadow for depth */
+    margin: 20px auto; /* Center align with margin */
+    max-width: 500px; /* Max width for better readability */
+    text-align: center; /* Center the text */
+}
+
+.sos-info {
+    font-size: 18px; /* Font size for readability */
+    color: #c0392b; /* Dark red text color */
+    font-weight: bold; /* Bold text */
+    line-height: 1.5; /* Increased line height for better spacing */
+}
+
+.sos-info::before {
+    content: "⚠️ "; /* Adding an emoji before the text */
+    font-size: 24px; /* Larger size for the emoji */
+    vertical-align: middle; /* Align with text */
+}

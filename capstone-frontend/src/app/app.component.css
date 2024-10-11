@@ -1,0 +1,8 @@
+/* General content styling with sidebar for non-landing pages */
+.content-wrapper {
+  margin-left: 230px; /* Adjust for static sidebar width */
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Add scroll if content overflows */
+}
+

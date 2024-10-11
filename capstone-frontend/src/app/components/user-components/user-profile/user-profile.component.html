@@ -1,0 +1,65 @@
+<app-user-navbar></app-user-navbar>
+<div class="profile-container" *ngIf="user">
+  <h2>User Profile</h2>
+  <div class="profile-grid">
+    <div class="profile-box">
+      <i class="bi bi-file-person"></i>
+        <div class="profile-field">
+        <label>Name:</label>
+        <span>{{ user.name }}</span>
+      </div>
+    </div>
+    <!-- <div class="profile-box">
+      <i class="fas fa-briefcase"></i>
+      <div class="profile-field">
+        <label>Role:</label>
+        <span>{{ user.role }}</span>
+      </div>
+    </div> -->
+    <div class="profile-box">
+      <i class="bi bi-envelope-at-fill"></i>
+            <div class="profile-field">
+        <label>Email:</label>
+        <span>{{ user.email }}</span>
+      </div>
+    </div>
+    <div class="profile-box">
+      <i class="bi bi-telephone-fill"></i>
+            <div class="profile-field">
+        <label>Phone:</label>
+        <span>{{ user.phone }}</span>
+      </div>
+    </div>
+    <div class="profile-box">
+      <i class="bi bi-house-door-fill"></i>
+            <div class="profile-field">
+        <label>Address:</label>
+        <span>{{ user.address }}</span>
+      </div>
+    </div>
+    <div class="profile-box">
+      <i class="bi bi-file-earmark-person"></i>
+            <div class="profile-field">
+        <label>Gender:</label>
+        <span>{{ user.gender }}</span>
+      </div>
+    </div>
+    <div class="profile-box">
+      <i class="bi bi-calendar-check-fill"></i>
+        <div class="profile-field">
+        <label>Age:</label>
+        <span>{{ user.age }}</span>
+      </div>
+    </div>
+    <div class="profile-box">
+      <i class="bi bi-exclamation-triangle"></i>
+      <div class="profile-field">
+        <label>Emergency Contact:</label>
+        <span>{{ user.emergencyContact }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!user" class="loading-message">
+  <p>Loading user data...</p>
+</div>

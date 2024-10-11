@@ -1,0 +1,121 @@
+/* view-incidents.component.css */
+
+/* General container for the view-incidents component */
+.container {
+  margin-left: 60px; /* Initial margin when the sidebar is collapsed */
+  transition: margin-left 0.3s ease; /* Smooth transition when the sidebar expands */
+  padding: 20px;
+  width: 80%; /* Increased width for better content layout */
+  background-color: #f4f7fa; /* Light background color for the entire container */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* When the sidebar is hovered, adjust the container margin */
+#sidebar:hover + .container,
+#sidebar:hover ~ .container {
+  margin-left: 200px; /* Adjust margin when the sidebar is expanded */
+}
+
+/* Styling the incident cards container */
+.incident-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout */
+  gap: 30px; /* Gap between cards */
+}
+
+/* Individual card styling */
+.card {
+  background: white; /* Clean white background for cards */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+  position: relative; /* For positioning pseudo-elements */
+  overflow: hidden; /* Ensure pseudo-elements don’t overflow */
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Decorative overlay for card */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px; /* Decorative top line */
+  background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradient line */
+  border-radius: 20px 20px 0 0; /* Rounded corners on top */
+}
+
+/* Card header styles */
+.card-title {
+  margin: 0 0 10px 0;
+  font-size: 1.6em; /* Slightly larger title */
+  color: #343a40; /* Dark text for titles */
+  font-weight: bold; /* Bold title */
+  transition: color 0.3s; /* Transition for title color on hover */
+}
+
+/* Card body styles */
+.card-subtitle {
+  color: #6c757d;
+  margin-bottom: 10px;
+  font-weight: 500; /* Slightly bolder subtitle */
+}
+
+.card-text {
+  margin: 8px 0;
+  color: #495057; /* Darker text for better readability */
+  line-height: 1.6; /* Improved line height for better readability */
+}
+
+/* Card footer styles */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #495057;
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient button */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Rounded button */
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Button shadow */
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #0056b3, #007bff); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    padding: 10px;
+    width: 95%; /* Adjusted width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; 
+  }
+}

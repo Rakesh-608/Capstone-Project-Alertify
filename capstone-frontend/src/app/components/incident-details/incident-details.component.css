@@ -1,0 +1,51 @@
+/* Container for the entire incident details page */
+.incident-details-container {
+    display: flex;
+    justify-content: center; /* Centers the incident details card horizontally */
+    margin-top: 20px;
+    padding-left: 250px; /* Adjust padding to accommodate sidebar */
+  }
+  
+  /* Styles for the incident details card */
+  .incident-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .incident-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .incident-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .incident-card strong {
+    font-weight: bold;
+  }
+  
+  /* Button to go back to the incidents list */
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
